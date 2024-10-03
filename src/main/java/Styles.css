@@ -1,0 +1,25 @@
+.buttonD {
+    -fx-background-color: #6B2F7B;
+    -fx-background-radius: 4;
+    -fx-text-fill: #FFFFFF;
+}
+/*.text-field{*/
+/*    -fx-background-radius: 4;*/
+/*}*/
+
+.SideBarDesign{
+    -fx-background-color:  #696986;
+    -fx-border-color: #333;
+    -fx-border-width: .5;
+}
+.Dashboard_BookPane{
+    -fx-background-color: rgba(237, 237, 237, 0.9);
+}
+.bookCard {
+    -fx-background-color: rgba(181, 181, 199, 0.7);
+}
+
+.reduce_opacity{
+    -fx-opacity: 0.47;
+    -fx-background-radius: 4;
+}
