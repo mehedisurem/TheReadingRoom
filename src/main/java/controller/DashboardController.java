@@ -45,18 +45,47 @@ public class DashboardController implements Controller, Initializable {
 
     private Model model;
 
+//    @Override
+//    public void setModel(Model model) {
+//        this.model = model;
+//    }
+//
+//    @Override
+//    public void initData() {
+//        User currentUser = model.getCurrentUser();
+//        System.out.println("Current user: " + currentUser);
+//        if (currentUser != null) {
+//            System.out.println("Username: " + currentUser.getUsername());
+//            System.out.println("First name: " + currentUser.getFname());
+//            System.out.println("Last name: " + currentUser.getLname());
+//            userWelcomeMsg.setText("Welcome, " + currentUser.getFname() + " " + currentUser.getLname() + "!");
+//        } else {
+//            System.out.println("Current user is null");
+//        }
+//        // Initialize other dashboard data here
+//    }
+
     @Override
     public void setModel(Model model) {
+        System.out.println("Setting model in DashboardController");
         this.model = model;
+        System.out.println("Model set. Current user in model: " + (model.getCurrentUser() != null ? model.getCurrentUser().getUsername() : "null"));
     }
 
     @Override
     public void initData() {
+        System.out.println("Initializing data in DashboardController");
         User currentUser = model.getCurrentUser();
+        System.out.println("Current user from model: " + currentUser);
         if (currentUser != null) {
+            System.out.println("User details - Username: " + currentUser.getUsername()
+                    + ", FirstName: " + currentUser.getFname()
+                    + ", LastName: " + currentUser.getLname());
             userWelcomeMsg.setText("Welcome, " + currentUser.getFname() + " " + currentUser.getLname() + "!");
+        } else {
+            System.out.println("Current user is null in DashboardController");
+            userWelcomeMsg.setText("Welcome, Guest!");
         }
-        // Initialize other dashboard data here
     }
 
     @FXML

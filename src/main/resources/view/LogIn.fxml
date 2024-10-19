@@ -49,5 +49,10 @@
             <Font name="Arial" size="14.0" />
          </font>
       </Label>
+      <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="528.0" layoutY="503.0" prefHeight="25.0" prefWidth="228.0" textAlignment="CENTER" textFill="#f20000">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
