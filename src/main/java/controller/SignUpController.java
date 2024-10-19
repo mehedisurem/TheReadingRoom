@@ -57,7 +57,12 @@ public class SignUpController implements Controller, Initializable {
             User newUser = model.getUserDao().createUser(username, password, fname, lname);
             if (newUser != null) {
                 model.setCurrentUser(newUser);
-                navigateTo("/view/Dashboard.fxml", "Dashboard");
+                if ("admin".equals(newUser.getUsername()) && "reading_admin".equals(newUser.getPassword())) {
+                    navigateTo("/view/AdminDashboard.fxml", "Admin Dashboard");
+                } else {
+                    navigateTo("/view/Dashboard.fxml", "Dashboard");
+                }
+
             } else {
                 SignInpageAlert.setText("Error creating account");
             }
