@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c67e36c8-e4f4-4451-9672-ac6d78d0cab1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminUpdateStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminUpdateStockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminViewStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminViewStockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/SignUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/SignUp.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="c67e36c8-e4f4-4451-9672-ac6d78d0cab1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +91,7 @@
       <workItem from="1728918991210" duration="8070000" />
       <workItem from="1729016759368" duration="1227000" />
       <workItem from="1729172293955" duration="5451000" />
-      <workItem from="1729331623182" duration="8340000" />
+      <workItem from="1729331623182" duration="9007000" />
     </task>
     <servers />
   </component>
