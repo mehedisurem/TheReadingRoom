@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../Styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewCartController">
+    <children>
+        <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+            <top>
+                <Pane prefHeight="34.0" prefWidth="800.0" styleClass="SideBarDesign" BorderPane.alignment="CENTER">
+                    <children>
+                        <Text layoutX="319.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Reading Room" textAlignment="CENTER" wrappingWidth="147.21630859375">
+                            <font>
+                                <Font name="System Bold Italic" size="13.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+            </top>
+            <left>
+                <Pane prefHeight="566.0" prefWidth="142.0" styleClass="SideBarDesign" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="3.0" layoutY="6.0" onMouseClicked="#DashboardOnClick" prefHeight="26.0" prefWidth="138.0" text="Dashboard">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/dashboard.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold Italic" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="2.0" layoutY="51.0" onMouseClicked="#SearchBookOnClick" prefHeight="26.0" prefWidth="138.0" text="Search Books">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/Books.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold Italic" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="2.0" layoutY="93.0" onMouseClicked="#CheckOutOnClick" prefHeight="26.0" prefWidth="138.0" text="Check Out">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/checkout.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold Italic" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="3.0" layoutY="217.0" onMouseClicked="#EditProfileOnClick" prefHeight="26.0" prefWidth="138.0" text="Edit Profile">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/membership.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold Italic" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="3.0" layoutY="257.0" onMouseClicked="#LogOutOnClick" prefHeight="26.0" prefWidth="138.0" text="Log Out">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/logout.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold Italic" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="3.0" layoutY="135.0" onMouseClicked="#viewOrderOnClick" prefHeight="26.0" prefWidth="138.0" text="View All Orders">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/orders.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold Italic" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="3.0" layoutY="177.0" onMouseClicked="#ExportOnClick" prefHeight="26.0" prefWidth="138.0" text="Export All Orders">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/reports.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold Italic" size="13.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </left>
+            <center>
+                <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ScrollPane fitToWidth="true" layoutX="61.0" layoutY="44.0" prefHeight="469.0" prefWidth="531.0" />
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="642.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Your Cart" textAlignment="CENTER" />
+                        <Pane layoutX="472.0" layoutY="523.0" prefHeight="29.0" prefWidth="170.0">
+                            <children>
+                                <ImageView fitHeight="27.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/self-checkout.png" />
+                                    </image>
+                                </ImageView>
+                                <Button layoutX="35.0" layoutY="2.0" mnemonicParsing="false" onAction="#CheckOutOnClick" prefHeight="25.0" prefWidth="109.0" text="Check Out" />
+                            </children>
+                        </Pane>
+                  <Pane layoutX="290.0" layoutY="523.0" prefHeight="29.0" prefWidth="170.0">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/Continue.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="35.0" layoutY="2.0" mnemonicParsing="false" onAction="#ContinueShoppingOnClick" prefHeight="25.0" prefWidth="133.0" text="Continue Shopping" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="cartTotalAmount" alignment="CENTER" layoutX="233.0" layoutY="527.0" prefHeight="22.0" prefWidth="77.0" text="0.00">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="148.0" layoutY="527.0" prefHeight="22.0" prefWidth="96.0" text="Total Amount: $">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                    </children></Pane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

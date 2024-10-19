@@ -23,3 +23,9 @@
     -fx-opacity: 0.47;
     -fx-background-radius: 4;
 }
+
+.button {
+    -fx-background-color: rgba(171, 90, 232, 0.7);
+    -fx-background-radius: 4;
+    -fx-text-fill: #FFFFFF;
+}

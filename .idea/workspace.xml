@@ -5,35 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c67e36c8-e4f4-4451-9672-ac6d78d0cab1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/Books.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/Profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/checkout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/dashboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/logout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/membership.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/orders.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/reports.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Image/ReadingRoom.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Image/book1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Image/book2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Image/book3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Image/book4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Image/book5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Image/book6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Image/book7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Image/book8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Image/book9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/LogIn.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/Continue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/self-checkout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AdminDashboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AdminUpdateStockController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AdminViewStockController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/DashboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/EditProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ExportFileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Initializable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/SearchBookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ViewCartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ViewOrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/AdminDashboard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/AdminUpdateStock.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/AdminViewStock.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/Dashboard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/EditProfile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ExportFile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/SearchBook.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/SignUp.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewCart.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewOrder.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/LogIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/LogIn.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,49 +51,55 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
+        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="CSS File" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2mvtcutjZMyQx7TgbPGKI5pETUA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/liebe/FurtherProgramming/TheReadingRoom/target/classes",
+    "last_opened_file_path": "/Users/liebe/FurtherProgramming/TheReadingRoom/src/main/java/Icons",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.24804688",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/Icons" />
+      <recent name="$PROJECT_DIR$/target/classes/Icons" />
+      <recent name="$PROJECT_DIR$/target/classes/view" />
       <recent name="$PROJECT_DIR$/target/classes" />
       <recent name="$PROJECT_DIR$/src/main/java/Image" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="dao" />
@@ -108,11 +121,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727968962032</updated>
-      <workItem from="1727968963323" duration="3332000" />
+      <workItem from="1727968963323" duration="7416000" />
+      <workItem from="1728097097210" duration="19514000" />
+      <workItem from="1728184261612" duration="12970000" />
+      <workItem from="1728476507109" duration="2177000" />
+      <workItem from="1728918991210" duration="8070000" />
+      <workItem from="1729016759368" duration="1227000" />
+      <workItem from="1729172293955" duration="5451000" />
+      <workItem from="1729331623182" duration="3033000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

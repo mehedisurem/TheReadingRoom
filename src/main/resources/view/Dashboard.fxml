@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../Styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+   <children>
+      <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+         <top>
+            <Pane prefHeight="34.0" prefWidth="800.0" styleClass="SideBarDesign" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="319.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Reading Room" textAlignment="CENTER" wrappingWidth="147.21630859375">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </top>
+         <left>
+            <Pane prefHeight="566.0" prefWidth="142.0" styleClass="SideBarDesign" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="3.0" layoutY="6.0" onMouseClicked="#DashboardOnClick" prefHeight="26.0" prefWidth="138.0" text="Dashboard">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/dashboard.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="2.0" layoutY="51.0" onMouseClicked="#SearchBookOnClick" prefHeight="26.0" prefWidth="138.0" text="Search Books">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/Books.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="2.0" layoutY="93.0" onMouseClicked="#CheckOutOnClick" prefHeight="26.0" prefWidth="138.0" text="Check Out">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/checkout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="3.0" layoutY="217.0" onMouseClicked="#EditProfileOnClick" prefHeight="26.0" prefWidth="138.0" text="Edit Profile">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/membership.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="3.0" layoutY="257.0" onMouseClicked="#LogOutOnClick" prefHeight="26.0" prefWidth="138.0" text="Log Out">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="3.0" layoutY="135.0" onMouseClicked="#viewOrderOnClick" prefHeight="26.0" prefWidth="138.0" text="View All Orders">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/orders.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="3.0" layoutY="177.0" onMouseClicked="#ExportOnClick" prefHeight="26.0" prefWidth="138.0" text="Export All Orders">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/reports.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fx:id="userWelcomeMsg" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hi Mehedi , Welcome to The Reading Room" wrappingWidth="282.21630859375">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top 5 Selling Books" wrappingWidth="161.6181640625">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Text>
+                  <Pane layoutX="20.0" layoutY="57.0" prefHeight="499.0" prefWidth="628.0" styleClass="Dashboard_BookPane">
+                     <children>
+                        <Pane fx:id="Card1" layoutX="25.0" layoutY="31.0" prefHeight="205.0" prefWidth="169.0" styleClass="bookCard">
+                           <children>
+                              <ImageView fx:id="card1img" fitHeight="100.0" fitWidth="100.0" layoutX="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/book2.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="card1Title" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="103.0" prefHeight="17.0" prefWidth="147.0" text="Java: How To Program" />
+                              <Label fx:id="card1Author" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="120.0" prefHeight="17.0" prefWidth="147.0" text="Deitel and Deitel" />
+                              <Label layoutX="23.0" layoutY="137.0" text="Copies:" />
+                              <Label layoutX="23.0" layoutY="154.0" text="Sold:" />
+                              <Label layoutX="23.0" layoutY="171.0" text="Price:" />
+                              <Label fx:id="card1Copies" layoutX="70.0" layoutY="137.0" text="100" />
+                              <Label fx:id="card1Sold" layoutX="70.0" layoutY="154.0" text="475" />
+                              <Label fx:id="card1price" layoutX="70.0" layoutY="171.0" text="\$70" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="Card4" layoutX="25.0" layoutY="280.0" prefHeight="205.0" prefWidth="169.0" styleClass="bookCard">
+                           <children>
+                              <ImageView fx:id="card4img" fitHeight="100.0" fitWidth="100.0" layoutX="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/book9.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="card4Title" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="103.0" prefHeight="17.0" prefWidth="147.0" text="Bayesian Statistics The Fun Way" />
+                              <Label fx:id="card4Author" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="120.0" prefHeight="17.0" prefWidth="147.0" text="Will Kurt" />
+                              <Label layoutX="23.0" layoutY="137.0" text="Copies:" />
+                              <Label layoutX="23.0" layoutY="154.0" text="Sold:" />
+                              <Label layoutX="23.0" layoutY="171.0" text="Price:" />
+                              <Label fx:id="card4Copies" layoutX="70.0" layoutY="137.0" text="600" />
+                              <Label fx:id="card4Sold" layoutX="70.0" layoutY="154.0" text="155" />
+                              <Label fx:id="card4price" layoutX="70.0" layoutY="171.0" text="\$42" />
+                           </children>
+                        </Pane>
+                        <Text layoutX="25.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="#1">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="25.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="#4">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="228.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="#2">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="228.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="#5">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="436.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="#3">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Text>
+                        <Pane fx:id="Card2" layoutX="230.0" layoutY="31.0" prefHeight="205.0" prefWidth="169.0" styleClass="bookCard">
+                           <children>
+                              <ImageView fx:id="card2img" fitHeight="100.0" fitWidth="100.0" layoutX="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/book6.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="card2Title" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="103.0" prefHeight="17.0" prefWidth="147.0" text="Clean Code" />
+                              <Label fx:id="card2Author" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="120.0" prefHeight="17.0" prefWidth="147.0" text="Robert Martin" />
+                              <Label layoutX="23.0" layoutY="137.0" text="Copies:" />
+                              <Label layoutX="23.0" layoutY="154.0" text="Sold:" />
+                              <Label layoutX="23.0" layoutY="171.0" text="Price:" />
+                              <Label fx:id="card2Copies" layoutX="70.0" layoutY="137.0" text="100" />
+                              <Label fx:id="card2Sold" layoutX="70.0" layoutY="154.0" text="300" />
+                              <Label fx:id="card2price" layoutX="70.0" layoutY="171.0" text="\$45" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="Card5" layoutX="230.0" layoutY="280.0" prefHeight="205.0" prefWidth="169.0" styleClass="bookCard">
+                           <children>
+                              <ImageView fx:id="card5img" fitHeight="100.0" fitWidth="100.0" layoutX="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/book1.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="card5Title" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="103.0" prefHeight="17.0" prefWidth="147.0" text="Absolute Java" />
+                              <Label fx:id="card5Author" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="120.0" prefHeight="17.0" prefWidth="147.0" text="Savitch" />
+                              <Label layoutX="23.0" layoutY="137.0" text="Copies:" />
+                              <Label layoutX="23.0" layoutY="154.0" text="Sold:" />
+                              <Label layoutX="23.0" layoutY="171.0" text="Price:" />
+                              <Label fx:id="card5Copies" layoutX="70.0" layoutY="137.0" text="10" />
+                              <Label fx:id="card5Sold" layoutX="70.0" layoutY="154.0" text="142" />
+                              <Label fx:id="card5price" layoutX="70.0" layoutY="171.0" text="\$50" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="Card3" layoutX="436.0" layoutY="31.0" prefHeight="205.0" prefWidth="169.0" styleClass="bookCard">
+                           <children>
+                              <ImageView fx:id="card3img" fitHeight="100.0" fitWidth="100.0" layoutX="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/book7.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="card3Title" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="103.0" prefHeight="17.0" prefWidth="147.0" text="Gray Hat C#" />
+                              <Label fx:id="card3Author" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="120.0" prefHeight="17.0" prefWidth="147.0" text="Bradon Perry" />
+                              <Label layoutX="23.0" layoutY="137.0" text="Copies:" />
+                              <Label layoutX="23.0" layoutY="154.0" text="Sold:" />
+                              <Label layoutX="23.0" layoutY="171.0" text="Price:" />
+                              <Label fx:id="card1Copies22" layoutX="70.0" layoutY="137.0" text="300" />
+                              <Label fx:id="card3Sold" layoutX="70.0" layoutY="154.0" text="178" />
+                              <Label fx:id="card3price" layoutX="70.0" layoutY="171.0" text="\$68" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

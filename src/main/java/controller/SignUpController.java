@@ -4,9 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.Model;
 import model.User;
@@ -14,15 +15,24 @@ import model.User;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class LoginController implements Controller, Initializable {
+public class SignUpController implements Controller, Initializable {
     @FXML
-    private TextField LoginPagePassword;
+    private Label SignInpageAlert;
 
     @FXML
-    private TextField LoginPageUsername;
+    private TextField SignUpFName;
 
     @FXML
-    private Label errorLabel;
+    private TextField SignUpLName;
+
+    @FXML
+    private TextField SignUpUserName;
+
+    @FXML
+    private TextField SignupPassword;
+
+    @FXML
+    private AnchorPane rootPane;
 
     private Model model;
 
@@ -33,31 +43,33 @@ public class LoginController implements Controller, Initializable {
 
     @Override
     public void initData() {
-        // Initialize login view if needed
+        // Initialize signup view if needed
     }
 
     @FXML
-    void LogInOnClick(ActionEvent event) throws IOException {
-        String username = LoginPageUsername.getText();
-        String password = LoginPagePassword.getText();
+    void CreateAccountButtonOnClick(ActionEvent event) throws IOException {
+        String username = SignUpUserName.getText();
+        String password = SignupPassword.getText();
+        String fname = SignUpFName.getText();
+        String lname = SignUpLName.getText();
 
         try {
-            User user = model.getUserDao().getUser(username, password);
-            if (user != null) {
-                model.setCurrentUser(user);
+            User newUser = model.getUserDao().createUser(username, password, fname, lname);
+            if (newUser != null) {
+                model.setCurrentUser(newUser);
                 navigateTo("/view/Dashboard.fxml", "Dashboard");
             } else {
-                errorLabel.setText("Invalid username or password");
+                SignInpageAlert.setText("Error creating account");
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            errorLabel.setText("Error logging in");
+            SignInpageAlert.setText("Error creating account");
         }
     }
 
     @FXML
-    void SignupPageSignInOnClick(MouseEvent event) throws IOException {
-        navigateTo("/view/SignUp.fxml", "Sign Up");
+    void switchToLogInScene(MouseEvent event) throws IOException {
+        navigateTo("/view/Login.fxml", "Login");
     }
 
     private void navigateTo(String fxmlPath, String title) throws IOException {
@@ -68,7 +80,7 @@ public class LoginController implements Controller, Initializable {
         if (controller instanceof Initializable) {
             ((Initializable) controller).initData();
         }
-        Stage stage = (Stage) LoginPageUsername.getScene().getWindow();
+        Stage stage = (Stage) SignUpUserName.getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle(title);
         stage.show();

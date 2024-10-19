@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.AdminUpdateStockController"
+            prefHeight="600.0" prefWidth="800.0" stylesheets="@../Styles.css">
+
+    <children>
+        <BorderPane fx:id="borderPane" prefHeight="600.0" prefWidth="800.0">
+            <top>
+                <Pane prefHeight="34.0" prefWidth="800.0" styleClass="SideBarDesign" BorderPane.alignment="CENTER">
+                    <children>
+                        <Text layoutX="319.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Reading Room" textAlignment="CENTER" wrappingWidth="147.21630859375">
+                            <font>
+                                <Font name="System Bold Italic" size="13.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+            </top>
+            <left>
+                <Pane prefHeight="566.0" prefWidth="142.0" styleClass="SideBarDesign" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="3.0" layoutY="6.0" onMouseClicked="#DashboardOnClick" prefHeight="26.0" prefWidth="138.0" text="Dashboard">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/dashboard.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold Italic" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="2.0" layoutY="51.0" onMouseClicked="#ViewStockOnClick" prefHeight="26.0" prefWidth="138.0" text="View Stocks">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/Books.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold Italic" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="2.0" layoutY="93.0" onMouseClicked="#UpdateStockOnClick" prefHeight="26.0" prefWidth="138.0" text="Update Stocks">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/checkout.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold Italic" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="2.0" layoutY="129.0" onMouseClicked="#LogOutOnClick" prefHeight="26.0" prefWidth="138.0" text="Log Out">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/logout.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold Italic" size="13.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </left>
+            <center>
+                <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane layoutX="103.0" layoutY="73.0" prefHeight="358.0" prefWidth="481.0">
+                            <children>
+                                <Text layoutX="73.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Update Book Stock, First you need to select the book from combo box then you can update the price and quantity" textAlignment="CENTER" wrappingWidth="364.21630859375">
+                                    <font>
+                                        <Font name="System Italic" size="13.0" />
+                                    </font>
+                                </Text>
+                                <Label layoutX="80.0" layoutY="65.0" prefHeight="17.0" prefWidth="120.0" text="Select Book:" />
+                                <ComboBox fx:id="bookComboBox" layoutX="206.0" layoutY="61.0" prefWidth="150.0" styleClass="reduce_opacity" />
+                                <Label layoutX="80.0" layoutY="105.0" prefHeight="17.0" prefWidth="120.0" text="Author Name:" />
+                                <Label layoutX="80.0" layoutY="143.0" prefHeight="17.0" prefWidth="120.0" text="Price:" />
+                                <Label layoutX="80.0" layoutY="179.0" prefHeight="17.0" prefWidth="120.0" text="Quantity:" />
+                                <Label fx:id="bookAuthorLabel" layoutX="206.0" layoutY="100.0" prefHeight="22.0" prefWidth="152.0" styleClass="reduce_opacity" text="Fetch  From Database" />
+                                <TextField fx:id="priceText" layoutX="206.0" layoutY="139.0" prefHeight="25.0" prefWidth="151.0" styleClass="reduce_opacity" text="Fetch From Database" />
+                                <TextField fx:id="QuantityText" layoutX="206.0" layoutY="175.0" prefHeight="25.0" prefWidth="149.0" styleClass="reduce_opacity" text="Fetch From Database" />
+                                <Button layoutX="206.0" layoutY="242.0" mnemonicParsing="false" onAction="#UpdateStockOnClick" prefHeight="25.0" prefWidth="150.0" styleClass="buttonD" text="Update Stock" />
+                            </children>
+                        </Pane>
+                    </children>
+                </Pane>
+            </center>
+        </BorderPane>
+    </children>
+
+
+
+</AnchorPane>
