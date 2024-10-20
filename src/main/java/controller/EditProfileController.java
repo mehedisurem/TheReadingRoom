@@ -38,11 +38,7 @@ public class EditProfileController implements Controller, Initializable {
     @Override
     public void initData() {
         User currentUser = model.getCurrentUser();
-        if (currentUser != null) {
-            userNameText.setText(currentUser.getUsername());
-            FnameText.setText(currentUser.getFname());
-            LnameText.setText(currentUser.getLname());
-        }
+
     }
 
     @FXML
@@ -83,29 +79,7 @@ public class EditProfileController implements Controller, Initializable {
 
     @FXML
     void UpdateProfileOnClick(ActionEvent event) {
-        // Implement profile update logic
-        String newFname = FnameText.getText();
-        String newLname = LnameText.getText();
-        String currentPassword = currPassText.getText();
-        String newPassword = newPassText.getText();
 
-        User currentUser = model.getCurrentUser();
-        if (currentUser != null) {
-            // Update user information in the model
-            currentUser.setFname(newFname);
-            currentUser.setLname(newLname);
-            if (!currentPassword.isEmpty() && !newPassword.isEmpty()) {
-                // Verify current password and update to new password
-                // This is a simplistic approach, you should add proper validation
-                if (currentPassword.equals(currentUser.getPassword())) {
-                    currentUser.setPassword(newPassword);
-                } else {
-                    // Show error message for incorrect current password
-                }
-            }
-            // Update the user in the database
-            // model.getUserDao().updateUser(currentUser);
-        }
     }
 
     private void navigateTo(String fxmlPath, String title) throws IOException {

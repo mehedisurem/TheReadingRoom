@@ -1,8 +1,9 @@
 
-
 import controller.Controller;
 import controller.Initializable;
+import dao.Database;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -26,7 +27,6 @@ public class Main extends Application {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/Login.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-
             Controller controller = fxmlLoader.getController();
             controller.setModel(model);
             if (controller instanceof Initializable) {
@@ -43,5 +43,11 @@ public class Main extends Application {
             primaryStage.show();
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void stop() {
+        Database.closeConnection();
+        Platform.exit();
     }
 }
