@@ -58,4 +58,21 @@ public class UserDaoImpl implements UserDao {
             return new User(username, password,fname,lname);
         }
     }
+
+    @Override
+    public void updateUser(User user) throws SQLException {
+        String sql = "UPDATE " + TABLE_NAME + " SET password = ?, fname = ?, lname = ? WHERE username = ?";
+        try (Connection connection = Database.getConnection();
+             PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setString(1, user.getPassword());
+            stmt.setString(2, user.getFname());
+            stmt.setString(3, user.getLname());
+            stmt.setString(4, user.getUsername());
+
+            int affectedRows = stmt.executeUpdate();
+            if (affectedRows == 0) {
+                throw new SQLException("Updating user failed, no rows affected.");
+            }
+        }
+    }
 }
