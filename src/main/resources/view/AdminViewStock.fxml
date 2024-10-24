@@ -82,7 +82,7 @@
             <center>
                 <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                     <children>
-                        <TableView layoutX="23.0" layoutY="83.0" prefHeight="457.0" prefWidth="624.0">
+                        <TableView fx:id="bookTableView" layoutX="23.0" layoutY="83.0" prefHeight="457.0" prefWidth="624.0">
                             <columns>
                                 <TableColumn fx:id="T_Title" prefWidth="186.0" text="BOOK TITLE" />
                                 <TableColumn fx:id="T_Author" prefWidth="125.0" text="AUTHORS" />

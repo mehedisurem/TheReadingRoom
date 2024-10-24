@@ -8,5 +8,4 @@ public interface BookDao {
     void setup() throws SQLException;
     List<Book> getAllBooks() throws SQLException;
     List<Book> getTopBooks(int limit) throws SQLException;
-    // Add other methods as needed for future features
 }
