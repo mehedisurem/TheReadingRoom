@@ -12,10 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.AdminUpdateStockController"
-            prefHeight="600.0" prefWidth="800.0" stylesheets="@../Styles.css">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../Styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminUpdateStockController">
 
     <children>
         <BorderPane fx:id="borderPane" prefHeight="600.0" prefWidth="800.0">
@@ -95,14 +92,14 @@
                                     </font>
                                 </Text>
                                 <Label layoutX="80.0" layoutY="65.0" prefHeight="17.0" prefWidth="120.0" text="Select Book:" />
-                                <ComboBox fx:id="bookComboBox" layoutX="206.0" layoutY="61.0" prefWidth="150.0" styleClass="reduce_opacity" />
+                                <ComboBox fx:id="bookComboBox" layoutX="206.0" layoutY="61.0" prefHeight="25.0" prefWidth="234.0" styleClass="reduce_opacity" />
                                 <Label layoutX="80.0" layoutY="105.0" prefHeight="17.0" prefWidth="120.0" text="Author Name:" />
                                 <Label layoutX="80.0" layoutY="143.0" prefHeight="17.0" prefWidth="120.0" text="Price:" />
                                 <Label layoutX="80.0" layoutY="179.0" prefHeight="17.0" prefWidth="120.0" text="Quantity:" />
-                                <Label fx:id="bookAuthorLabel" layoutX="206.0" layoutY="100.0" prefHeight="22.0" prefWidth="152.0" styleClass="reduce_opacity" text="Fetch  From Database" />
-                                <TextField fx:id="priceText" layoutX="206.0" layoutY="139.0" prefHeight="25.0" prefWidth="151.0" styleClass="reduce_opacity" text="Fetch From Database" />
-                                <TextField fx:id="QuantityText" layoutX="206.0" layoutY="175.0" prefHeight="25.0" prefWidth="149.0" styleClass="reduce_opacity" text="Fetch From Database" />
+                                <Label fx:id="bookAuthorLabel" layoutX="206.0" layoutY="100.0" prefHeight="22.0" prefWidth="127.0" styleClass="reduce_opacity" text="Fetch  From Database" />
+                                <TextField fx:id="QuantityText" layoutX="206.0" layoutY="175.0" prefHeight="25.0" prefWidth="132.0" styleClass="reduce_opacity" text="Fetch From Database" />
                                 <Button layoutX="206.0" layoutY="242.0" mnemonicParsing="false" onAction="#UpdateStockOnClick" prefHeight="25.0" prefWidth="150.0" styleClass="buttonD" text="Update Stock" />
+                        <Label fx:id="priceText" layoutX="206.0" layoutY="141.0" prefHeight="22.0" prefWidth="130.0" styleClass="reduce_opacity" text="Fetch  From Database" />
                             </children>
                         </Pane>
                     </children>

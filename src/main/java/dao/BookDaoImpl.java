@@ -116,6 +116,42 @@ public class BookDaoImpl implements BookDao {
         }
         return topBooks;
     }
+    @Override
+    public void updateBookStock(String title, int newQuantity) throws SQLException {
+        String sql = "UPDATE " + TABLE_NAME + " SET physical_copies = ? WHERE title = ?";
+        try (Connection conn = Database.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, newQuantity);
+            stmt.setString(2, title);
 
+            int affectedRows = stmt.executeUpdate();
+            if (affectedRows == 0) {
+                throw new SQLException("Updating book failed, no book found with title: " + title);
+            }
+        }
+    }
+
+    @Override
+    public Book getBookByTitle(String title) throws SQLException {
+        String sql = "SELECT * FROM " + TABLE_NAME + " WHERE title = ?";
+        try (Connection conn = Database.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, title);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    return new Book(
+                            rs.getString("title"),
+                            rs.getString("authors"),
+                            rs.getInt("physical_copies"),
+                            rs.getDouble("price"),
+                            rs.getInt("sold_copies"),
+                            rs.getString("img_src")
+                    );
+                }
+                return null;
+            }
+        }
+    }
 
 }

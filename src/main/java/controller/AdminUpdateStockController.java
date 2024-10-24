@@ -1,9 +1,11 @@
 package controller;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -11,9 +13,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.Model;
+import model.Book;
 
 import java.io.IOException;
-
+import java.sql.SQLException;
+import java.util.List;
+import java.util.stream.Collectors;
 public class AdminUpdateStockController implements Controller, Initializable {
 
     @FXML
@@ -23,13 +28,13 @@ public class AdminUpdateStockController implements Controller, Initializable {
     private Label bookAuthorLabel;
 
     @FXML
-    private ComboBox<?> bookComboBox;
+    private ComboBox<String> bookComboBox;
 
     @FXML
     private BorderPane borderPane;
 
     @FXML
-    private TextField priceText;
+    private Label priceText;
 
     private Model model;
 
@@ -40,7 +45,72 @@ public class AdminUpdateStockController implements Controller, Initializable {
 
     @Override
     public void initData() {
-        // Initialize update stock view data if needed
+        loadBooks();
+
+        // Add listener to ComboBox selection
+        bookComboBox.setOnAction(event -> updateBookInfo());
+    }
+    private void loadBooks() {
+        try {
+            List<Book> books = model.getBookDao().getAllBooks();
+            List<String> bookTitles = books.stream()
+                    .map(Book::getTitle)
+                    .collect(Collectors.toList());
+            bookComboBox.setItems(FXCollections.observableArrayList(bookTitles));
+        } catch (SQLException e) {
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to load books: " + e.getMessage());
+        }
+    }
+
+    private void updateBookInfo() {
+        String selectedTitle = bookComboBox.getValue();
+        if (selectedTitle != null) {
+            try {
+                Book book = model.getBookDao().getBookByTitle(selectedTitle);
+                if (book != null) {
+                    String getQuantity = Integer.toString(book.getPhysicalCopies());
+                    String getPrice = Double.toString(book.getPrice());
+                    bookAuthorLabel.setText(book.getAuthors());
+                    QuantityText.setText(getQuantity);
+                    priceText.setText(getPrice);
+                }
+            } catch (SQLException e) {
+                showAlert(Alert.AlertType.ERROR, "Error", "Failed to load book details: " + e.getMessage());
+            }
+        }
+    }
+
+    @FXML
+    void UpdateStockOnClick(ActionEvent event) {
+        String selectedTitle = bookComboBox.getValue();
+        if (selectedTitle == null) {
+            showAlert(Alert.AlertType.WARNING, "Warning", "Please select a book first");
+            return;
+        }
+
+        try {
+            int newQuantity = Integer.parseInt(QuantityText.getText().trim());
+            if (newQuantity < 0) {
+                showAlert(Alert.AlertType.WARNING, "Warning", "Quantity cannot be negative");
+                return;
+            }
+
+            model.getBookDao().updateBookStock(selectedTitle, newQuantity);
+            updateBookInfo(); // Refresh the display
+            showAlert(Alert.AlertType.INFORMATION, "Success", "Stock updated successfully");
+        } catch (NumberFormatException e) {
+            showAlert(Alert.AlertType.WARNING, "Warning", "Please enter a valid number");
+        } catch (SQLException e) {
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to update stock: " + e.getMessage());
+        }
+    }
+
+    private void showAlert(Alert.AlertType alertType, String title, String content) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
     }
 
     @FXML
@@ -54,10 +124,6 @@ public class AdminUpdateStockController implements Controller, Initializable {
         navigateTo("/view/Login.fxml", "Login");
     }
 
-    @FXML
-    void UpdateStockOnClick(MouseEvent event) throws IOException {
-        // Implement stock update logic here
-    }
 
     @FXML
     void ViewStockOnClick(MouseEvent event) throws IOException {
