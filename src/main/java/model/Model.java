@@ -1,9 +1,6 @@
 package model;
 
-import dao.UserDao;
-import dao.UserDaoImpl;
-import dao.BookDao;
-import dao.BookDaoImpl;
+import dao.*;
 
 import java.sql.SQLException;
 import java.util.HashMap;
@@ -14,11 +11,13 @@ public class Model {
     private BookDao bookDao;
     private User currentUser;
     private Map<String, ShoppingCart> userCarts;
+    private OrderDao orderDao;
 
     public Model() {
         userDao = new UserDaoImpl();
         bookDao = new BookDaoImpl();
         userCarts = new HashMap<>();
+        orderDao = new OrderDaoImpl();
     }
 
     public ShoppingCart getCartForUser(String username) {
@@ -33,6 +32,7 @@ public class Model {
     public void setup() throws SQLException {
         userDao.setup();
         bookDao.setup();
+        orderDao.setup();
     }
 
     public UserDao getUserDao() {
@@ -41,6 +41,10 @@ public class Model {
 
     public BookDao getBookDao() {
         return bookDao;
+    }
+
+    public OrderDao getOrderDao() {
+        return orderDao;
     }
 
     public User getCurrentUser() {

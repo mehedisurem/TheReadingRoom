@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c67e36c8-e4f4-4451-9672-ac6d78d0cab1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/cardInfo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/manifest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/mastercard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/radio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/shopping.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/visacard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/CheckoutController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/Checkout.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/OrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/OrderDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/OrderItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ViewCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ViewCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewCart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewCart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.db" beforeDir="false" afterPath="$PROJECT_DIR$/application.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CheckoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Checkout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Checkout.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,7 @@
       <workItem from="1728918991210" duration="8070000" />
       <workItem from="1729016759368" duration="1227000" />
       <workItem from="1729172293955" duration="5451000" />
-      <workItem from="1729331623182" duration="38325000" />
+      <workItem from="1729331623182" duration="41978000" />
     </task>
     <servers />
   </component>
