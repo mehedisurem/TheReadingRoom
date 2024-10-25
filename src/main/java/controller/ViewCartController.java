@@ -154,8 +154,14 @@ public class ViewCartController implements Controller, Initializable {
 
     @FXML
     void CheckOutOnClick(ActionEvent event) {
-        showAlert("Checkout process not implemented yet.");
+        // Refresh dashboard or handle navigation
     }
+
+    @FXML
+    void PlaceOrderOnClick(ActionEvent event) throws IOException {
+        navigateTo("/view/Checkout.fxml", "Check Out");
+    }
+
 
     @FXML
     void ContinueShoppingOnClick(ActionEvent event) throws IOException {

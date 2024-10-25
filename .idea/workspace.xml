@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c67e36c8-e4f4-4451-9672-ac6d78d0cab1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/CartItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/ShoppingCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/cardInfo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/manifest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/mastercard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/radio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/shopping.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Icons/visacard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/CheckoutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/Checkout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.db" beforeDir="false" afterPath="$PROJECT_DIR$/application.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/EditProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/EditProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ExportFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ExportFileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SearchBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SearchBookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ViewCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ViewCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ViewOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ViewOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/SearchBook.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/SearchBook.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewCart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewCart.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +27,8 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="CSS File" />
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -57,7 +55,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/liebe/FurtherProgramming/TheReadingRoom/target/classes/Image",
+    "last_opened_file_path": "/Users/liebe/FurtherProgramming/TheReadingRoom/src/main/resources/view",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -72,11 +70,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/target/classes/Image" />
-      <recent name="$PROJECT_DIR$/src/main/java/Image" />
+      <recent name="$PROJECT_DIR$/src/main/resources/view" />
       <recent name="$PROJECT_DIR$/src/main/java/Icons" />
       <recent name="$PROJECT_DIR$/target/classes/Icons" />
-      <recent name="$PROJECT_DIR$/target/classes/view" />
+      <recent name="$PROJECT_DIR$/target/classes/Image" />
+      <recent name="$PROJECT_DIR$/src/main/java/Image" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="dao" />
@@ -105,7 +103,7 @@
       <workItem from="1728918991210" duration="8070000" />
       <workItem from="1729016759368" duration="1227000" />
       <workItem from="1729172293955" duration="5451000" />
-      <workItem from="1729331623182" duration="33310000" />
+      <workItem from="1729331623182" duration="38325000" />
     </task>
     <servers />
   </component>

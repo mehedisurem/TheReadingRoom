@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../Styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewCartController">
     <children>
@@ -110,29 +120,29 @@
                 </Pane>
             </left>
             <center>
-                <VBox spacing="10" alignment="CENTER">
+                <VBox alignment="CENTER" spacing="10">
                     <children>
                         <Label alignment="CENTER" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Your Cart" textAlignment="CENTER" />
 
                         <TableView fx:id="cartTableView" VBox.vgrow="ALWAYS">
                             <columns>
-                                <TableColumn fx:id="titleColumn" text="Title" prefWidth="200.0" />
-                                <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="100.0" />
-                                <TableColumn fx:id="priceColumn" text="Price" prefWidth="100.0" />
-                                <TableColumn fx:id="totalColumn" text="Total" prefWidth="100.0" />
+                                <TableColumn fx:id="titleColumn" prefWidth="200.0" text="Title" />
+                                <TableColumn fx:id="quantityColumn" prefWidth="100.0" text="Quantity" />
+                                <TableColumn fx:id="priceColumn" prefWidth="100.0" text="Price" />
+                                <TableColumn fx:id="totalColumn" prefWidth="100.0" text="Total" />
                             </columns>
                         </TableView>
 
-                        <HBox spacing="10" alignment="CENTER">
+                        <HBox alignment="CENTER" spacing="10">
                             <children>
-                                <Button text="Update Quantity" onAction="#updateQuantity" />
-                                <Button text="Remove Item" onAction="#removeItem" />
+                                <Button onAction="#updateQuantity" text="Update Quantity" />
+                                <Button onAction="#removeItem" text="Remove Item" />
                             </children>
                         </HBox>
 
-                        <HBox spacing="10" alignment="CENTER">
+                        <HBox alignment="CENTER" spacing="10">
                             <children>
-                                <Label text="Total Amount: $" style="-fx-font-weight: bold;">
+                                <Label style="-fx-font-weight: bold;" text="Total Amount: $">
                                     <font>
                                         <Font size="13.0" />
                                     </font>
@@ -145,7 +155,7 @@
                             </children>
                         </HBox>
 
-                        <HBox spacing="20" alignment="CENTER">
+                        <HBox alignment="CENTER" spacing="20">
                             <children>
                                 <HBox alignment="CENTER" spacing="5">
                                     <children>
@@ -165,14 +175,14 @@
                                                 <Image url="@../Icons/self-checkout.png" />
                                             </image>
                                         </ImageView>
-                                        <Button mnemonicParsing="false" onAction="#CheckOutOnClick" text="Check Out" />
+                                        <Button mnemonicParsing="false" onAction="#PlaceOrderOnClick" text="Place Order " />
                                     </children>
                                 </HBox>
                             </children>
                         </HBox>
                     </children>
                     <padding>
-                        <javafx.geometry.Insets top="10" right="10" bottom="10" left="10"/>
+                        <javafx.geometry.Insets bottom="10" left="10" right="10" top="10" />
                     </padding>
                 </VBox>
             </center>
