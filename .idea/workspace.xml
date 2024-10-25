@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c67e36c8-e4f4-4451-9672-ac6d78d0cab1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/ShoppingCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminUpdateStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminUpdateStockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BookDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/AdminUpdateStock.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/AdminUpdateStock.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.db" beforeDir="false" afterPath="$PROJECT_DIR$/application.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/EditProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/EditProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ExportFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ExportFileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SearchBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SearchBookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ViewCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ViewCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ViewOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ViewOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/SearchBook.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/SearchBook.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewCart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewCart.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +105,7 @@
       <workItem from="1728918991210" duration="8070000" />
       <workItem from="1729016759368" duration="1227000" />
       <workItem from="1729172293955" duration="5451000" />
-      <workItem from="1729331623182" duration="27026000" />
+      <workItem from="1729331623182" duration="33310000" />
     </task>
     <servers />
   </component>

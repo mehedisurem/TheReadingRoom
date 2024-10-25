@@ -47,8 +47,8 @@ public class ExportFileController implements Controller, Initializable {
     }
 
     @FXML
-    void CheckOutOnClick(MouseEvent event) {
-        // Implement checkout functionality
+    void CheckOutOnClick(MouseEvent event) throws IOException {
+        navigateTo("/view/ViewCart.fxml", "View Cart");
     }
 
     @FXML
