@@ -3,15 +3,15 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-
-<?import javafx.scene.text.Text?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+
 <AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../Styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewOrderController">
     <children>
         <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
@@ -119,20 +119,39 @@
             <center>
                 <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                     <children>
-                        <VBox layoutX="74.0" layoutY="7.0" spacing="20">
-                            <children>
-                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="484.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text=" Order History" />
-                                <TableView fx:id="ViewordersTableView" VBox.vgrow="ALWAYS">
-                                    <columns>
-                                        <TableColumn fx:id="VieworderDateColumn" prefWidth="103.0" text="Date &amp; Time" />
-                                        <TableColumn fx:id="VieworderBookTitleColumn" prefWidth="192.0" text="Book Title" />
-                                        <TableColumn fx:id="ViewQuantityColumn" prefWidth="84.0" text="Quantity" />
-                                        <TableColumn fx:id="ViewPriceColumn" prefWidth="104.0" text="Total Price" />
-                                    </columns>
-                                </TableView>
-                            </children>
+                        <VBox layoutX="10" layoutY="10" spacing="10">
+                            <Label styleClass="title-label" text="Order History">
+                                <font>
+                                    <Font name="System Bold" size="20.0" />
+                                </font>
+                            </Label>
+
+
+                            <TableView fx:id="ViewordersTableView" prefHeight="200.0" prefWidth="600.0">
+                                <columns>
+                                    <TableColumn fx:id="orderNumberColumn" prefWidth="260.0" text="Order Number" />
+                                    <TableColumn fx:id="orderDateColumn" prefWidth="173.0" text="Order Date" />
+                                    <TableColumn fx:id="totalAmountColumn" prefWidth="166.0" text="Total Amount" />
+                                </columns>
+                            </TableView>
+
+                            <Label styleClass="subtitle-label" text="Order Details">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+
+
+                            <TableView fx:id="orderDetailsTableView" prefHeight="200.0" prefWidth="600.0">
+                                <columns>
+                                    <TableColumn fx:id="bookTitleColumn" prefWidth="276.0" text="Book Title" />
+                                    <TableColumn fx:id="quantityColumn" prefWidth="124.0" text="Quantity" />
+                                    <TableColumn fx:id="priceColumn" prefWidth="198.0" text="Price" />
+                                </columns>
+                            </TableView>
                         </VBox>
-                    </children></Pane>
+                    </children>
+                </Pane>
             </center>
         </BorderPane>
     </children>

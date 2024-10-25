@@ -51,6 +51,16 @@ public class CheckoutController implements Controller, Initializable {
 
     @FXML
     void ProceedtoCheckoutOnClick(ActionEvent event) {
+        // Get cart first
+        ShoppingCart cart = model.getCartForUser(model.getCurrentUser().getUsername());
+
+        // Check if cart is empty
+        if (cart.getItems().isEmpty()) {
+            showError("Your cart is empty. Please add items before checking out.");
+            return;
+        }
+
+        // Proceed with card validation
         if (!validateCardDetails()) {
             return;
         }
@@ -58,7 +68,6 @@ public class CheckoutController implements Controller, Initializable {
         try {
             // Create order
             String orderNumber = generateOrderNumber();
-            ShoppingCart cart = model.getCartForUser(model.getCurrentUser().getUsername());
 
             Order order = new Order(
                     orderNumber,

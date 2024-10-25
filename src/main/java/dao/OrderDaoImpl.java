@@ -37,17 +37,77 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
+    public List<Order> getOrdersByUser(String userId) throws SQLException {
+        List<Order> orders = new ArrayList<>();
+        String sql = "SELECT * FROM " + ORDERS_TABLE + " WHERE user_id = ? ORDER BY order_date DESC";
+
+        try (Connection conn = Database.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, userId);
+            System.out.println("Executing query for user: " + userId); // Debug print
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    Order order = new Order(
+                            rs.getString("order_number"),
+                            rs.getString("user_id"),
+                            rs.getTimestamp("order_date").toLocalDateTime(),
+                            rs.getDouble("total_amount")
+                    );
+                    System.out.println("Found order: " + order.getOrderNumber()); // Debug print
+                    orders.add(order);
+                }
+            }
+        }
+        return orders;
+    }
+
+    @Override
+    public List<OrderItem> getOrderItems(String orderNumber) throws SQLException {
+        List<OrderItem> items = new ArrayList<>();
+        String sql = "SELECT * FROM " + ORDER_ITEMS_TABLE + " WHERE order_number = ?";
+
+        try (Connection conn = Database.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, orderNumber);
+            System.out.println("Getting items for order: " + orderNumber); // Debug print
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    OrderItem item = new OrderItem(
+                            rs.getString("order_number"),
+                            rs.getString("book_title"),
+                            rs.getInt("quantity"),
+                            rs.getDouble("price")
+                    );
+                    items.add(item);
+                }
+            }
+        }
+        return items;
+    }
+
+    @Override
     public String createOrder(Order order) throws SQLException {
         String sql = "INSERT INTO " + ORDERS_TABLE +
                 " (order_number, user_id, order_date, total_amount) VALUES (?, ?, ?, ?)";
 
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
+
             stmt.setString(1, order.getOrderNumber());
             stmt.setString(2, order.getUserId());
             stmt.setTimestamp(3, Timestamp.valueOf(order.getOrderDate()));
             stmt.setDouble(4, order.getTotalAmount());
-            stmt.executeUpdate();
+
+            int result = stmt.executeUpdate();
+            System.out.println("Order created with number: " + order.getOrderNumber()); // Debug print
+
+            if (result == 0) {
+                throw new SQLException("Creating order failed, no rows affected.");
+            }
             return order.getOrderNumber();
         }
     }
@@ -59,25 +119,16 @@ public class OrderDaoImpl implements OrderDao {
 
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
+
             for (OrderItem item : items) {
                 stmt.setString(1, item.getOrderNumber());
                 stmt.setString(2, item.getBookTitle());
                 stmt.setInt(3, item.getQuantity());
                 stmt.setDouble(4, item.getPrice());
                 stmt.executeUpdate();
+                System.out.println("Added item to order: " + item.getOrderNumber()); // Debug print
             }
         }
     }
-
-    @Override
-    public List<Order> getOrdersByUser(String userId) throws SQLException {
-        return List.of();
-    }
-
-    @Override
-    public List<OrderItem> getOrderItems(String orderNumber) throws SQLException {
-        return List.of();
-    }
-
 
 }

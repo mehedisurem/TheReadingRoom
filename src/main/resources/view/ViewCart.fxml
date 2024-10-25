@@ -126,10 +126,10 @@
 
                         <TableView fx:id="cartTableView" VBox.vgrow="ALWAYS">
                             <columns>
-                                <TableColumn fx:id="titleColumn" prefWidth="200.0" text="Title" />
-                                <TableColumn fx:id="quantityColumn" prefWidth="100.0" text="Quantity" />
-                                <TableColumn fx:id="priceColumn" prefWidth="100.0" text="Price" />
-                                <TableColumn fx:id="totalColumn" prefWidth="100.0" text="Total" />
+                                <TableColumn fx:id="titleColumn" prefWidth="254.0" text="Title" />
+                                <TableColumn fx:id="quantityColumn" prefWidth="103.0" text="Quantity" />
+                                <TableColumn fx:id="priceColumn" prefWidth="136.0" text="Price" />
+                                <TableColumn fx:id="totalColumn" prefWidth="144.0" text="Total" />
                             </columns>
                         </TableView>
 
