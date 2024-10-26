@@ -13,6 +13,16 @@ public class OrderItem {
         this.price = price;
     }
 
+    private Order order;
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
     // Getters and setters
     public String getOrderNumber() { return orderNumber; }
     public void setOrderNumber(String orderNumber) { this.orderNumber = orderNumber; }
