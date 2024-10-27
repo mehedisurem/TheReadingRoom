@@ -36,6 +36,7 @@ public class OrderDaoImpl implements OrderDao {
         }
     }
 
+    // This method will take a userID and fetch all the order that this user has been placed
     @Override
     public List<Order> getOrdersByUser(String userId) throws SQLException {
         List<Order> orders = new ArrayList<>();
@@ -63,6 +64,8 @@ public class OrderDaoImpl implements OrderDao {
         return orders;
     }
 
+
+    // This method will fetch order items from database and return to it's caller
     @Override
     public List<OrderItem> getOrderItems(String orderNumber) throws SQLException {
         List<OrderItem> items = new ArrayList<>();
@@ -89,6 +92,7 @@ public class OrderDaoImpl implements OrderDao {
         return items;
     }
 
+    // Storing the order data into database
     @Override
     public String createOrder(Order order) throws SQLException {
         String sql = "INSERT INTO " + ORDERS_TABLE +
@@ -112,6 +116,7 @@ public class OrderDaoImpl implements OrderDao {
         }
     }
 
+    // Storing each book separately into the database
     @Override
     public void addOrderItems(List<OrderItem> items) throws SQLException {
         String sql = "INSERT INTO " + ORDER_ITEMS_TABLE +

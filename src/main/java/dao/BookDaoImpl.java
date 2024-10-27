@@ -44,6 +44,7 @@ public class BookDaoImpl implements BookDao {
         }
     }
 
+    // Initializing the book database by following book data
     private void insertInitialData() throws SQLException {
         String[] books = {
                 "Absolute Java|Savitch|10|50.0|142|@../Image/book1.png",
@@ -73,8 +74,10 @@ public class BookDaoImpl implements BookDao {
         }
     }
 
+    // Purpose of this method is to fetch book data from database
     @Override
     public List<Book> getAllBooks() throws SQLException {
+        // books list will store all the books data and will return the list to it's caller
         List<Book> books = new ArrayList<>();
         String sql = "SELECT * FROM " + TABLE_NAME;
         try (Connection conn = Database.getConnection();
@@ -94,8 +97,10 @@ public class BookDaoImpl implements BookDao {
         return books;
     }
 
+    // Purpose of this method is to fetch book data from database based on sold copies
     @Override
     public List<Book> getTopBooks(int limit) throws SQLException {
+        // TopBooks list will store the top 5 books data based on sold copies. Since int limit is set 5 in DashboardController class
         List<Book> topBooks = new ArrayList<>();
         String sql = "SELECT * FROM " + TABLE_NAME + " ORDER BY sold_copies DESC LIMIT ?";
         try (Connection conn = Database.getConnection();
@@ -116,6 +121,8 @@ public class BookDaoImpl implements BookDao {
         }
         return topBooks;
     }
+
+    // Purpose of this method is to Update book data into database by User given book title & Quantity
     @Override
     public void updateBookStock(String title, int newQuantity) throws SQLException {
         String sql = "UPDATE " + TABLE_NAME + " SET physical_copies = ? WHERE title = ?";
@@ -131,6 +138,8 @@ public class BookDaoImpl implements BookDao {
         }
     }
 
+
+    // Purpose of this method is to fetch book data from database by User given book title
     @Override
     public Book getBookByTitle(String title) throws SQLException {
         String sql = "SELECT * FROM " + TABLE_NAME + " WHERE title = ?";

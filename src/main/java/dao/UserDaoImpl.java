@@ -22,6 +22,8 @@ public class UserDaoImpl implements UserDao {
         }
     }
 
+
+    // This method will check that userID and password matches with any data from database, if matched it will return the user instance else return null
     @Override
     public User getUser(String username, String password) throws SQLException {
         String sql = "SELECT * FROM " + TABLE_NAME + " WHERE username = ? AND password = ?";
@@ -44,6 +46,7 @@ public class UserDaoImpl implements UserDao {
         }
     }
 
+    // This method will store a new user data into the database
     @Override
     public User createUser(String username, String password, String fname, String lname) throws SQLException {
         String sql = "INSERT INTO " + TABLE_NAME + " VALUES (?, ?,?,?)";
@@ -59,6 +62,7 @@ public class UserDaoImpl implements UserDao {
         }
     }
 
+    // This method will update user (Name, and password ) in the database if Username name matched with username
     @Override
     public void updateUser(User user) throws SQLException {
         String sql = "UPDATE " + TABLE_NAME + " SET password = ?, fname = ?, lname = ? WHERE username = ?";
