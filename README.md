@@ -4,9 +4,12 @@ The Reading Rooom
 </h1>
 
 <div style="text-align: justify">
-This repository contains the source code for The Reading Room Bookstore application built to satisfy the requirements of COSC2391 Further Programming / COSC1295 Advanced Programming course at RMIT University.
-
+This repository contains the source code for The Reading Room Bookstore application built to satisfy the requirements of COSC2391 Further Programming / COSC1295 Advanced Programming course at RMIT University. 
 </div>
+
+
+To see the full requirement of this project. Please go to this  [Link](https://drive.google.com/drive/folders/1YdbuTkRk_K3HMO11dspkXcFimgbpnj44?usp=sharing) and download the Requirement.pdf file 
+
 
 ## Project Overview
 
@@ -79,6 +82,12 @@ From there simply click on "Don't have account, Sign up?" that will navigate you
 - `src/test/java/`: Contains the unit tests
 - `pom.xml`: Maven configuration file
 - `README.md`: This readme file
+
+
+## References
+- [Lambda expression](https://www.baeldung.com/java-map-computeifabsent)
+- [Oracle's official Stream documentation](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)
+- [Tableview](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TableView.html)
 
 ## Contributors
 
