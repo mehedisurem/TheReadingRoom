@@ -125,6 +125,10 @@ public class BookDaoImpl implements BookDao {
     // Purpose of this method is to Update book data into database by User given book title & Quantity
     @Override
     public void updateBookStock(String title, int newQuantity) throws SQLException {
+        if (newQuantity < 0) {
+            throw new IllegalArgumentException("Stock quantity cannot be negative");
+        }
+
         String sql = "UPDATE " + TABLE_NAME + " SET physical_copies = ? WHERE title = ?";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {

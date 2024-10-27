@@ -66,6 +66,14 @@ public class CheckoutController implements Controller, Initializable {
         }
 
         try {
+            // Verify stock availability before proceeding
+            for (CartItem cartItem : cart.getItems()) {
+                if (!model.validateBookQuantity(cartItem.getBook(), cartItem.getQuantity())) {
+                    showError("Sorry, " + cartItem.getBook().getTitle() + " is no longer available in the requested quantity.");
+                    return;
+                }
+            }
+
             // Create order
             String orderNumber = generateOrderNumber();
 
@@ -76,7 +84,7 @@ public class CheckoutController implements Controller, Initializable {
                     cart.getTotal()
             );
 
-            // Create order items
+            // Create order items and update book stock
             List<OrderItem> orderItems = new ArrayList<>();
             for (CartItem cartItem : cart.getItems()) {
                 OrderItem orderItem = new OrderItem(
@@ -86,6 +94,11 @@ public class CheckoutController implements Controller, Initializable {
                         cartItem.getBook().getPrice()
                 );
                 orderItems.add(orderItem);
+
+                // Update book stock
+                Book currentBook = model.getBookDao().getBookByTitle(cartItem.getBook().getTitle());
+                int newStock = currentBook.getPhysicalCopies() - cartItem.getQuantity();
+                model.getBookDao().updateBookStock(currentBook.getTitle(), newStock);
             }
 
             // Save order to database
