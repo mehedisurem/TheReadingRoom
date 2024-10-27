@@ -73,6 +73,7 @@ public class SearchBookController implements Controller, Initializable {
         }
     }
 
+    // creates book class
     private Pane createBookCard(Book book) {
         Pane card = new Pane();
         card.setPrefSize(259, 260);

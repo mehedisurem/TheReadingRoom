@@ -46,6 +46,7 @@ public class SignUpController implements Controller, Initializable {
         // Initialize signup view if needed
     }
 
+    // Creating a new user and store it to database
     @FXML
     void CreateAccountButtonOnClick(ActionEvent event) throws IOException {
         String username = SignUpUserName.getText();

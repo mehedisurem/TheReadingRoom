@@ -36,6 +36,7 @@ public class LoginController implements Controller, Initializable {
         // Initialize login view if needed
     }
 
+    // Login Credential check and navigate scene/ alert based on that
     @FXML
     void LogInOnClick(ActionEvent event) throws IOException {
         String username = LoginPageUsername.getText();

@@ -135,6 +135,7 @@ public class ViewOrderController implements Controller, Initializable {
         }
     }
 
+    // Load order Details Based on Order Number
     private void loadOrderDetails(String orderNumber) {
         try {
             List<OrderItem> items = model.getOrderDao().getOrderItems(orderNumber);

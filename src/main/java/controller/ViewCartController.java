@@ -96,6 +96,7 @@ public class ViewCartController implements Controller, Initializable {
         });
     }
 
+    // Load Cart Item
     private void loadCartItems() {
         if (model.getCurrentUser() != null) {
             ShoppingCart cart = model.getCartForUser(model.getCurrentUser().getUsername());
@@ -104,10 +105,13 @@ public class ViewCartController implements Controller, Initializable {
         }
     }
 
+    //Update Cart Amount
     private void updateTotalAmount() {
         ShoppingCart cart = model.getCartForUser(model.getCurrentUser().getUsername());
         cartTotalAmount.setText(String.format("Total Amount: $%.2f", cart.getTotal()));
     }
+
+    // Update Quantity of selected items
     @FXML
     void updateQuantity(ActionEvent event) {
         CartItem selectedItem = cartTableView.getSelectionModel().getSelectedItem();
@@ -141,6 +145,8 @@ public class ViewCartController implements Controller, Initializable {
         }
     }
 
+
+    // Remove Selected cart Item
     @FXML
     void removeItem(ActionEvent event) {
         CartItem selectedItem = cartTableView.getSelectionModel().getSelectedItem();
