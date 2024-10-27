@@ -1,6 +1,12 @@
 # The Reading Room Bookstore Application
+<h1 align="center">
+The Reading Rooom
+</h1>
 
+<div style="text-align: justify">
 This repository contains the source code for The Reading Room Bookstore application built to satisfy the requirements of COSC2391 Further Programming / COSC1295 Advanced Programming course at RMIT University.
+
+</div>
 
 ## Project Overview
 
@@ -33,6 +39,33 @@ To run the application locally:
 2. Open the project in your Java IDE
 3. Set up the required dependencies (JavaFX, JDBC driver)
 4. Build and run the `Main` class
+
+## Project Dependencies 
+
+To run the application you should check  if the proper dependencies are selected or not!!
+1.  sqlite-jdbc-3.46.1.3
+2. zulu23.28.85-ca-fx-jdk23.0.0
+
+If those two dependencies are not into the project dependencies you can download them from [here](https://drive.google.com/drive/folders/1YdbuTkRk_K3HMO11dspkXcFimgbpnj44?usp=sharing)
+
+
+## User Credential
+<div style="text-align: justify">
+You can simply create your own user account.
+After Build and run the `Main` class the Login scene will pop up. 
+From there simply click on "Don't have account, Sign up?" that will navigate you to Signup Scene there you can create new user account
+</div>
+
+- For Admin User you must use this Credential:
+  - UserID: admin
+  - Password: reading_admin
+
+- For Existing User:
+  - UserID: Surem
+  - Password: 1234 
+  
+  - UserID: Mir
+  - Password: @123#asd
 
 ## Project Structure
 
