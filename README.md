@@ -38,8 +38,11 @@ To run the application locally:
 
 - `src/main/java/`: Contains the Java source code
     - `controllers/`: JavaFX controllers
+    - `dao/`: Database configurations
     - `models/`: Data models and database access
     - `views/`: FXML view files
+    - `Image/`: Contains Image of all book covers
+    - `Icons/`: Contains Icon Images
 - `src/test/java/`: Contains the unit tests
 - `pom.xml`: Maven configuration file
 - `README.md`: This readme file
