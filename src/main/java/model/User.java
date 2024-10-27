@@ -7,12 +7,15 @@ public class User {
     private String lname;
     public User() {
     }
+    // Constructor
     public User(String username, String password, String fname, String lname) {
         this.username = username;
         this.password = password;
         this.fname = fname;
         this.lname = lname;
     }
+
+    // Getters and setters
     public String getUsername() {
         return username;
     }

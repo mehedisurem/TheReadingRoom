@@ -8,6 +8,7 @@ public class Book {
     private int soldCopies;
     private String imgSrc;
 
+    // Constructor
     public Book(String title, String authors, int physicalCopies, double price, int soldCopies, String imgSrc) {
         this.title = title;
         this.authors = authors;

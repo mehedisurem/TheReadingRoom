@@ -4,11 +4,13 @@ public class CartItem {
     private Book book;
     private int quantity;
 
+    // Constructor
     public CartItem(Book book, int quantity) {
         this.book = book;
         this.quantity = quantity;
     }
 
+    // Getters and setters
     public Book getBook() { return book; }
     public void setBook(Book book) { this.book = book; }
 

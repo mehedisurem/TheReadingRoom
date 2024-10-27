@@ -13,6 +13,7 @@ public class Model {
     private Map<String, ShoppingCart> userCarts;
     private OrderDao orderDao;
 
+    // Constructor
     public Model() {
         userDao = new UserDaoImpl();
         bookDao = new BookDaoImpl();
@@ -20,10 +21,12 @@ public class Model {
         orderDao = new OrderDaoImpl();
     }
 
+    //Retrieves or creates a shopping cart for a specific user.
     public ShoppingCart getCartForUser(String username) {
         return userCarts.computeIfAbsent(username, k -> new ShoppingCart());
     }
 
+    //Validates if there is sufficient stock available for a requested quantity of a book.
     public boolean validateBookQuantity(Book book, int requestedQuantity) throws SQLException {
         Book currentBook = bookDao.getBookByTitle(book.getTitle());
         return currentBook.getPhysicalCopies() >= requestedQuantity;
@@ -35,6 +38,7 @@ public class Model {
         orderDao.setup();
     }
 
+    // Getters and setters
     public UserDao getUserDao() {
         return userDao;
     }

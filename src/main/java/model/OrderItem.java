@@ -6,6 +6,7 @@ public class OrderItem {
     private int quantity;
     private double price;
 
+    // Constructor
     public OrderItem(String orderNumber, String bookTitle, int quantity, double price) {
         this.orderNumber = orderNumber;
         this.bookTitle = bookTitle;

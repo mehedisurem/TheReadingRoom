@@ -11,6 +11,7 @@ public class Order {
     private double totalAmount;
     private List<OrderItem> items;
 
+    // Constructor
     public Order(String orderNumber, String userId, LocalDateTime orderDate, double totalAmount) {
         this.orderNumber = orderNumber;
         this.userId = userId;
