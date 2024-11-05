@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c67e36c8-e4f4-4451-9672-ac6d78d0cab1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.db" beforeDir="false" afterPath="$PROJECT_DIR$/application.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CheckoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BookDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +96,8 @@
       <workItem from="1729331623182" duration="47032000" />
       <workItem from="1729868727972" duration="3108000" />
       <workItem from="1729915485968" duration="804000" />
-      <workItem from="1730001848652" duration="11221000" />
+      <workItem from="1730001848652" duration="14574000" />
+      <workItem from="1730779079275" duration="319000" />
     </task>
     <servers />
   </component>
